@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="keywords" content="캐주얼인사이트,데이터-와,데이터-와우,비투아이랩,데이터댐,상관분석,단변량분석,평행좌표,기사 분석,워드 클라우드,지도,리프렛,대시보드,시각화,비주얼라이제이션,씨투아이,데이터-와 클라우드,빅데이터,비아이"/>
+  <meta name="keywords" content="相关分析, 单变量分析, 平行坐标, 文章分析, 可视化,数据和云,大数据"/>
+  <meta name="keywords" content="カジュアルインサイト,データ-と,データ-ワウ,ビトアイラップ,データダム,相関分析,単変量分析,平行座標,記事分析,ワードクラウド,マップ,リーフレット,ダッシュボード ,視覚化,ビジュアライゼーション,シーツーアイ,データとクラウド,ビッグデータ,ビアイ"/>
+  <meta name="keywords" content="Casual-Insight,Data-Wow,B2i-Lab,Data-Dam,Correlation,Univarate,Parallel Coordinate,Word Cloud,Map,Leaflet,DDMV,BI,Visualization,Public Data,C2i,C2i-Cloud,Big Data,Dashboard,Data Warehouse,DW,Mining" />
+  <meta name="description" content="모든 이를 위한 데이터(공공, 거래소 데이터) 제공 다차원 시각화 서비스,Data-Wow Multi-dimensional Visualization for Everyone">
+
+  <meta property="og:title" content="데이터-와(Data-Wow): Casual-Insights">
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="데이터-와 다차원 시각화(Data-Wow: Data Multi-dimensional Visualization for Everyone)는 탐색적 정보분석 및 시각화를 제공하는 솔루션으로서, 업로드 및 Open API 데이터로 부터 분석까지 모든 사람들을 위한 솔루션입니다.">
+  <meta property="og:image" content="http:///b2i-lab.com/favicon.png">
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="400" />
+  <meta property="og:image:height" content="300" />
+  <meta property="og:site_name" content="http://b2i-lab.com">
+  <meta property="og:url" content="http:///b2i-lab.com">
+  <title>B2i-Lab - 비투아이랩</title>
+
+  <!-- CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/jquery.slitslider.css" rel="stylesheet">
+  <link href="assets/css/social-icons.css" rel="stylesheet">
+  <link href="assets/css/linecons.css" rel="stylesheet">
+  <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/c2iTable.css" rel="stylesheet">
+  <!-- Web Fonts -->
+  <link href='//fonts.googleapis.com/css?family=Lato:300,400,700.900,300italic,400italic' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" type="image/png" href="favicon.png" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+			<script src="assets/js/html5shiv.js"></script>
+			<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1304858307093960"
+    crossorigin="anonymous"></script>
+  <script src="assets/js/modernizr.custom.79639.js"></script>
+  <noscript>
+			<link href="assets/css/no-js.css" rel="stylesheet">
+		</noscript>
+</head>
+
+<body id="c2iDemo" data-spy="scroll" data-target=".navbar-fixed-top">
+  <!-- Fixed Navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+        <a class="navbar-brand" href="#c2iDemo">비투아이랩 <span>B2i-Lab</span></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+          <li class="page-scroll"><a href="#c2iDemo"><i class="glyphicon glyphicon-star"></i> 씨투아이 데모</a></li>
+          <li class="page-scroll"><a href="#intro">홈</a></li>
+          <li class="page-scroll"><a href="#about">우리는</a></li>
+          <li class="page-scroll"><a href="#services">서비스</a></li>
+          <li class="page-scroll"><a href="#ddmv"><i class="glyphicon glyphicon-star"></i> 데이터-댐</a></li>
+          <li class="page-scroll"><a href="#price"><i class="glyphicon"></i> 판매 가격</a></li>
+
+          <!--<li class="page-scroll"><a href="c2i_Price.html"><i class="glyphicon glyphicon-star"></i> 판매 가격 및 정책</a></li>-->
+          <li class="page-scroll"><a href="#contact">연락처</a></li>
+        </ul>
+      </div>
+      <!-- /navbar-collapse -->
+    </div>
+    <!-- /container -->
+  </nav>
+  <!-- /navbar -->
+
+  <!-- C2i Demo Wrap -->
+  <section id="c2iDemo" class="contactwrap">
+    <div class="container">
+      <h2 style="text-decoration: underline">씨투아이 시각화 컴포넌트 데모</h2>
+      <h4>(C2i: Chart Intelligence & Insights)</h4>
+      <h4>메타 옵션과 데이터주입 코딩 한 줄 이면, 시각화 & BI 기능 제공</h4>
+      <p class="coding">c2i.infoG.std3D('#id', options).data(data).render();</p>
+      <hr>
+      <h4>아래 데모는 예산/실적,계층기반을 제외하면, 인포그래픽 or 단순 컴포넌트 입니다.</h4>
+      <div class="row icons text-center">
+        <div class="col-lg-4">
+          <a href="c2i_Pyramid.html">
+            <h4><i class="glyphicon glyphicon-play-circle" style="top: 2px;right: 8px;"></i>피라미드 차트 시각화</h4>
+            <img src="./image/c2i_Pyramid.png" alt="c2i_Pyramid" width='100%'></a>
+          <p>이진 분석 패턴 처리 용이.</p>
+        </div>
+        <div class="col-lg-4">
+          <a href="c2i_Motion.html">
+            <h4><i class="glyphicon glyphicon-play-circle" style="top: 2px;right: 8px;"></i>모션 차트 시각화</h4>
+            <img src="./image/c2i_Motion.png" alt="c2i_Motion" width='100%'></a>
+          </a>
+          <p>유명한 모션 차트입니다.<br>이것보다 더 고난위의 사분면(Quadrant) 차트도 있습니다.</p>
+        </div>
+        <div class="col-lg-4">
+          <a href="c2iColorPicker.html">
+            <h4><i class="glyphicon glyphicon-play-circle" style="top: 2px;right: 8px;"></i>색상 선택기</h4>
+            <img src="./image/c2iColorPicker.png" alt="c2iColorPicker" width='100%'></a>
+          </a>
+          <p>멍텅구리 UI 컴포넌트의 색상 선택기 제공</p>
+        </div>
+      </div>
+
+      <div class="row icons text-center">
+        <div class="col-lg-4">
+          <a href="c2i_Std3D.html">
+            <h4><i class="glyphicon glyphicon-play-circle" style="top: 2px;right: 8px;"></i>3D기반 차트 시각화</h4>
+            <img src="./image/c2i_Std3D.png" alt="c2i_Std3D" width='100%'></a>
+          <p>기업 대시보드 및 공공데이터 제공 UI로 안성마춤.</p>
+        </div>
+        <div class="col-lg-4">
+          <a href="c2i_Std3DWatch.html">
+            <h4><i class="glyphicon glyphicon-play-circle" style="top: 2px;right: 8px;"></i>키오스크 및 생산실적 3D 시각화</h4>
+            <img src="./image/c2i_Std3DWatch.png" alt="c2i_Std3DWatch" width='100%'></a>
+          </a>
+          <p>스마트 팩토리용 정보 제공<br>(키오스크 용도 추천)</p>
+        </div>
+        <div class="col-lg-4">
+          <a href="c2i_CalView.html">
+            <h4><i class="glyphicon glyphicon-play-circle" style="top: 2px;right: 8px;"></i>캘린더-뷰 패턴 시각화</h4>
+            <img src="./image/c2i_CalView.png" alt="c2i_CalView" width='100%'></a>
+          </a>
+          <p>특정 년도에 따른 해당 차원(지역,부서,계정,담당자 등)의<br>월별 및 일별 항목(Measure)분석.<br>동 데모에서는 20년간 일별 매출 및 주가 데이터 제공</p>
+        </div>
+      </div>
+      <div class="row icons text-center">
+        <div class="col-lg-4">
+          <a href="c2i_Budget.html">
+            <h4><i class="glyphicon glyphicon-play-circle" style="top: 2px;right: 8px;"></i>예산/실적 패턴 시각화</h4>
+            <img src="./image/c2i_Budget.png" alt="c2i_Std3D" width='100%'></a>
+          </a>
+          <p>예산,계획,목표대비 실적 데이터 분석 용도.</p>
+        </div>
+        <div class="col-lg-4">
+          <a href="c2i_CompSliderRange.html">
+            <h4><i class="glyphicon glyphicon-play-circle" style="top: 2px;right: 8px;"></i>UI/UX 슬라이더</h4>
+            <img src="./image/c2i_CompSliderRange.png" alt="c2i_CompSliderRange" width='100%'></a>
+          </a>
+          <p>수평,수직 범위 및 단일 값 슬라이더.<br>(수평 범위만 데모)</p>
+        </div>
+        <div class="col-lg-4">
+          <a href="c2i_Waterfall.html">
+            <h4><i class="glyphicon glyphicon-play-circle" style="top: 2px;right: 8px;"></i>Waterfall(or Cascade)</h4>
+            <img src="./image/c2i_Waterfall.png" alt="c2i_Waterfall" width='100%'></a>
+          </a>
+          <p>재고,인사,외상 등의 인사이트 제공.(멍텅구리 컴포넌트)<br>C2i 특징: 그룹 패턴 지원.(전기, 전전기 대비 비교 개념)</p>
+        </div>
+      </div>
+      <div class="row icons text-center">
+        <div class="col-lg-4">
+          <a href="c2i_Bullet.html">
+            <h4><i class="glyphicon glyphicon-play-circle" style="top: 2px;right: 8px;"></i>Bullet 패턴 시각화</h4>
+            <img src="./image/c2i_Bullet.png" alt="c2i_Bullet" width='100%'></a>
+          </a>
+          <p>다양한 기준으로 비교할 데이터 분석 용도.</p>
+          <p>멍텅구리의 동적 진화된 컴포넌트</p>
+        </div>
+        <div class="col-lg-4">
+          <a href="c2i_PaCoord.html">
+            <h4><i class="glyphicon glyphicon-play-circle" style="top: 2px;right: 8px;"></i>평행 좌표 시각화</h4>
+            <img src="./image/c2i_PaCoord.png" alt="c2i_PaCoord" width='100%'></a>
+          </a>
+          <p>다차원 항목 데이터 분석 용도.</p>
+          <p>동적 통계정보 제공.</p>
+        </div>
+        <div class="col-lg-4">
+          <a href="c2i_Hi.html">
+            <h4><i class="glyphicon glyphicon-play-circle" style="top: 2px;right: 8px;"></i>계층 기반 시각화</h4>
+            <img src="./image/c2i_Hi.png" alt="c2i_Hi" width='100%'></a>
+          </a>
+          <p>계층(Hierarchical)기반 데이터 분석 용도.</p>
+          <p>동적 통계정보 제공.</p>
+        </div>
+      </div>
+
+      <br>
+      <div class="row icons text-center">
+        <div class="col-lg-offset-1 col-lg-10">
+          <div class="btn-group btn-group-justified" role="group">
+            <div class="btn-group" role="group">
+              <a href="https://www.youtube.com/watch?v=2aiO3_6eGEQ" target="_blank">
+                <button class="btn btn-default">3D 시각화 영상</button>
+              </a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="https://www.youtube.com/watch?v=nNZDCAFbacI" target="_blank">
+                <button class="btn btn-default">2D 시각화 영상</button>
+              </a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="./assets/doc/C2I_Intro_20_H2.pdf" download="C2I_Intro_20_H2.pdf">
+                <button class="btn btn-default">씨투아이 소개서</button>
+              </a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="./assets/doc/C2I_Dashboard_Intro_20_H2.pdf" download="C2I_Dashboard_Intro_20_H2.pdf">
+                <button class="btn btn-default">C2i 스마트 팩토리 대시보드 소개서</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row icons text-center">
+        <div class="col-lg-offset-1 col-lg-10">
+          <div class="btn-group btn-group-justified" role="group">
+            <div class="btn-group" role="group">
+              <a href="https://www.youtube.com/watch?v=OsUBD82j2bw" target="_blank">
+                <button class="btn btn-default">씨투아이 스튜디오 개략 영상</button>
+              </a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="https://www.youtube.com/watch?v=8MnLtDu2ZGc" target="_blank">
+                <button class="btn btn-default">씨투아이 스마트 팩토리 영상</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /row -->
+      <br><br><br>
+    </div>
+    <!-- /container -->
+  </section>
+  <!-- /C2i Demo wrap -->
+
+  <!-- Intro Wrap -->
+  <section id="intro" class="introwrap">
+    <div class="slider">
+      <div id="slider" class="sl-slider-wrapper">
+
+        <div class="sl-slider">
+
+          <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+            <div class="sl-slide-inner">
+              <div class="bg-img bg-img-1"></div>
+              <h2>데이터-댐 다차원 시각화 탄생!</h2>
+              <blockquote>
+                <p>수만 ~ 수십(백)만건의 단순한 데이터를 정보자산으로 변화시키는 마법같은 <br/><strong>DDMV(Data-Dam Multi-dimensional Visualization)</strong>의 <br/>감탄스러운 분석 시각화 기능에 찬사를 보냅니다. <br/>순수 웹기술로 구현한 것은 정말 놀랍습니다.</p>
+                <cite><a target="_blank" href="https://www.youtube.com/watch?v=ArL-Pv3U-40" style='color: yellow; font-size: 24px'>소비/상권 분야(1)-DDMV 데모 영상<i class="glyphicon glyphicon-hand-left" style="top: 5px;"></i></a></cite>
+              </blockquote>
+            </div>
+          </div>
+          <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="10" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1">
+            <div class="sl-slide-inner">
+              <div class="bg-img bg-img-2"></div>
+              <h2>씨투아이 스마트 팩토리 확장!</h2>
+              <blockquote>
+                <p style="color: yellow">스마트 공장 데이터의 스마트 시각화 분석차트 생성<br/>우리 공장의 종합 대시보드 뷰 제공. <br/>생산 현장의 실시간 대시보드 공유 <br/>이 모든 것을 <strong>C2i 스마트 팩토리</strong>가 제공합니다.</p>
+                <cite><a target="_blank" href="https://www.youtube.com/watch?v=8MnLtDu2ZGc" style='color: yellow; font-size: 24px'>씨투아이 스마트 팩토리 시연 영상<i class="glyphicon glyphicon-hand-left" style="top: 5px;"></i></a></cite>
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+            <div class="sl-slide-inner">
+              <div class="bg-img bg-img-4"></div>
+              <h2>청와대 일자리 대시보드 납품</h2>
+              <blockquote>
+                <p>청와대 일자리 대시보드에 당당히 납품하였습니다.<br/>200곳 이상의 기관,기업의 입력 데이터를 기반으로 한 차트에<br/>당사의 <strong>씨투아이(C2I)</strong>를 적용하였습니다. <br/>
+                  <p>더불어 몽골 재정 프로젝트에 선정 및 납품하였습니다.</p>
+                  <cite><a target="_blank" href="https://dashboard.jobs.go.kr/main">청와대 일자리 대시보드 방문 <i class="glyphicon glyphicon-hand-left" style="top: 5px;"></i></a></cite></blockquote>
+            </div>
+          </div>
+
+          <!--<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">-->
+          <!--<div class="sl-slide-inner">-->
+          <!--<div class="bg-img bg-img-3"></div>-->
+          <!--<h2>기술에 대한 끝없는 열정!</h2>-->
+          <!--<blockquote><p>오픈-소스 기반으로 항상 최신 기술을 연구합니다. <br/>더불어 참신한 기획력을 기반으로 꼭 필요한 제품을 제공하고자 합니다. <br/>우리는 기술을 사랑합니다.</p><cite>B2I-Lab CTO</cite></blockquote>-->
+          <!--</div>-->
+          <!--</div>-->
+
+        </div>
+        <!-- /sl-slider -->
+
+        <!-- Slide indicators -->
+        <nav id="nav-dots" class="nav-dots">
+          <span class="nav-dot-current"></span>
+          <span></span>
+          <span></span>
+        </nav>
+      </div>
+      <!-- /slider-wrapper -->
+    </div>
+    <!-- /container -->
+  </section>
+  <!-- /introwrap -->
+
+  <!-- About Wrap -->
+  <section id="about" class="aboutwrap">
+    <div class="container text-center">
+      <h2>기술력과 신뢰를 기반으로 한 비투아이랩</h2>
+      <h4>우리 팀과 제품의 특징을 살펴 보시지요.</h4>
+      <hr>
+      <div class="row">
+        <div class="col-lg-3">
+          <span aria-hidden="true" class="li_user"></span>
+          <h4>데이터-댐 다차원 시각화: DDMV</h4>
+          <p>IT 경력 25년이상 전문가로 구성된 인력과 그들이 보유한 전통적 기술에 최신 오픈기술을 더하여 <strong>C2i 기반의 탐색적 분석시각화, 공공데이터 시각화 및 클라우딩 서비스</strong> 제공.</p>
+        </div>
+        <div class="col-lg-3">
+          <span aria-hidden="true" class="li_world"></span>
+          <h4>지원 품질</h4>
+          <p>베테랑 IT 전문가들의 다양한 서비스를 느껴 보십시요. 제품의 완전성은 기본이며 교육, 기술이전 및 분기단위 업그레이드 등 능동적이며 역동적인 이러한 지원은 처음일 것 입니다.</p>
+        </div>
+        <div class="col-lg-3">
+          <span aria-hidden="true" class="li_paperplane"></span>
+          <h4>C2i 기반 솔루션</h4>
+          <p>평이한 대시보드, 차트, OLAP, BI가 아닙니다. <strong>웹+벡터+인포그래픽을 기반으로 한 분석 시각화 영역의 첨단 제품</strong>입니다. 여러분의 고객은 대 국민이거나 특정 고객 일 수 있습니다.</p>
+        </div>
+        <div class="col-lg-3">
+          <span aria-hidden="true" class="li_like"></span>
+          <h4>최상 및 최고 지향</h4>
+          <p>우리는 최상의 고객 서비스 제공을 위하여 끊임없이 연구개발에 매진하고 있습니다. 저희 제품을 살펴 보십시요, 최상 및 최고의 제품을 사용한다는 자부심을 갖게 될 것입니다.</p>
+        </div>
+      </div>
+      <!-- /row -->
+      <br><br>
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+          <img class="img-responsive team-Img" src="assets/img/team.png" alt="">
+        </div>
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+
+    <div class="spacer">
+      <div class="container text-center">
+        <a href="https://www.youtube.com/watch?v=nNZDCAFbacI" target="_blank">
+          <h2>
+            C2i 솔루션 & 서비스 <i class="glyphicon glyphicon-hand-left" style="top: 5px;"></i></h2>
+        </a>
+        <br>
+        <a href="./assets/doc/C2I_Intro_20_H2.pdf" download="C2I_Intro_20_H2.pdf"><img class="img-responsive prod-img" src="assets/img/spacer.png" alt="씨투아이(C2i) 소개서"></a>
+      </div>
+      <!-- /container -->
+    </div>
+    <!-- /spacer -->
+  </section>
+  <!-- /aboutwrap -->
+
+  <!-- Services Wrap -->
+  <section id="services" class="serviceswrap">
+    <div class="container">
+      <h2>단순 데이터를 인포그래픽 기술을 통한 정보화로 궁극에는 자산으로 제공</h2>
+      <h4>공공 데이터 개방은 출발점이며, 데이터는 인사이트 제공을 위한 핵심 요소.</h4>
+      <hr>
+      <div class="row icons text-center">
+        <div class="col-lg-4">
+          <span aria-hidden="true" class="li_data"></span>
+          <h4>공공 및 기업 웹사이트 링크서비스</h4>
+          <p><strong>데이터 시각화라며 멍텅구리 차트를 제공하는데 가치가 있는지요?</strong> 데이터 개방이라며 아직도 txt,csv,xls로 데이터를 내려주고 있습니까? <br><strong>저희가 분석 시각화를 제공해 드리겠습니다.</strong><br>데이터를 주시고 링크만 연결하세요, 대 국민 서비스의 모범적 시작입니다.</p>
+        </div>
+
+        <div class="col-lg-4">
+          <span aria-hidden="true" class="li_cloud"></span>
+          <h4>클라우드 & 온-프레미스 서비스 세가지</h4>
+          <p>1st <strong>DDMV Cloud</strong>을 통한 탐색적 데이터 분석서비스. <br>2nd <strong>DDMV</strong>의 링크 서비스를 활용하여 다차원 시각화 분석서비스를 귀사 웹-페이지에서 경험합니다.
+            <br>3rd <strong>4IR(Industry Rev 4.0)지원 Smart-Factory & Farm, ERP</strong>등의 솔루션과 더불어 DDMV or C2i를 동시 제공한 서비스입니다.</p>
+        </div>
+
+        <div class="col-lg-4">
+          <span aria-hidden="true" class="li_lock"></span>
+          <h4>안전과 보안</h4>
+          <p>개방된 기초 데이터에는 개인 비식별 데이터를 활용하므로 집단 성향은 알 수 있지만, 개인 식별은 불가능합니다.</p>
+        </div>
+      </div>
+      <!-- /row -->
+
+      <br>
+
+      <div class="row icons text-center">
+        <div class="col-lg-4">
+          <span aria-hidden="true" class="li_banknote"></span>
+          <h4>비용 효율 & 통찰력</h4>
+          <p>처음부터 구축하는 시대는 지나갔습니다. <strong>국내 최초의 순수 웹기반 탐색적 분석 시각화 솔루션</strong>을 활용하세요, 데이터만 주시면 <strong>귀사 사이트에 인사이트 서비스를 제공</strong>합니다.</p>
+        </div>
+
+        <div class="col-lg-4">
+          <span aria-hidden="true" class="li_user"></span>
+          <h4>데이터 가공 및 시각화 대시보드 서비스</h4>
+          <p>기업 내외부에 존재하는 데이터를 기반으로, 저희 <strong>데이터전문 인력이 가공을 대행</strong>해 드립니다. 그리고 탐색적 분석 시각화 대시보드 서비스를 제공 받으세요.</p>
+        </div>
+
+        <div class="col-lg-4">
+          <span aria-hidden="true" class="li_params"></span>
+          <p>클라우드 서비스? 또는 귀사 서버에 보유하고 싶으세요? 기존 시스템과 연계하고 싶으세요?</p>
+          <p>저희와 협의하시면 해결하여 드립니다.</p>
+        </div>
+      </div>
+      <!-- /row -->
+      <br><br><br>
+    </div>
+    <!-- /container -->
+
+    <!-- Clients -->
+    <div class="clientswrap">
+      <div class="container">
+        <h2>주요 고객 & 파트너</h2>
+        <hr>
+        <div class="row text-center">
+          <img class="img-responsive" src="assets/img/clients.png" alt="주요 고객 & 파트너">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /serviceswrap -->
+
+  <section id="ddmv" class="ddmvwrap">
+    <!-- DDMV Wrap -->
+    <div class="container text-center">
+      <h2 style="text-decoration: underline">데이터-댐 분석 시각화 소개 및 데모</h2>
+      <h4>(DDMV: Data-Dam Multi-dimensional Visualization)</h4>
+      <h4>수 만 ~ 수십(백)만건 데이터도 메타 설정만 하면, 분석 시각화 제공</h4>
+      <h4>누구나 사용할 수 있는 가장 쉽고 뛰어난 통찰력 제공</h4>
+      <hr>
+      <div class="row icons text-center">
+        <div class="col-lg-offset-3 col-lg-6">
+          <a href="https://b2i-ddmv.herokuapp.com/" target="_blank">
+            <h2>
+              데이터-댐 분석 시각화 클라우드 <i class="glyphicon glyphicon-hand-left" style="top: 5px;"></i></h2>
+            <p>데모는 공개 데이터(일부 제외)로서, 지속적인 데이터 및 업종 추가가 이루어 집니다.</p>
+            <img src="./image/ddmv_cloud.png" alt="ddmv_cloud" width='100%'>
+          </a>
+        </div>
+      </div>
+
+      <br>
+      <div class="row icons text-center">
+        <div class="col-lg-offset-1 col-lg-10">
+          <div class="btn-group btn-group-justified" role="group">
+            <div class="btn-group" role="group">
+              <a href="./assets/doc/B2I_DDMV_20_H2.pdf" download="B2I_DDMV_20_H2.pdf">
+                <button class="btn btn-default new-product">DDMV 데이터댐_다차원_시각화 소개서</button>
+              </a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="https://www.youtube.com/watch?v=noZ9H7wftsI" target="_blank">
+                <button class="btn btn-default new-product">데이터-댐 다차원 시각화(DDMV) 소개 영상</button>
+              </a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="https://www.youtube.com/watch?v=ArL-Pv3U-40" target="_blank">
+                <button class="btn btn-default new-product">소비/상권 분야(I)-DDMV 데모 영상</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-offset-1 col-lg-10">
+          <div class="btn-group btn-group-justified" role="group">
+            <div class="btn-group" role="group">
+              <a href="https://www.youtube.com/watch?v=Wcpu29gI53Y" target="_blank">
+                <button class="btn btn-default new-product">소비/상권 분야(II)-DDMV 데모 영상</button>
+              </a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="https://www.youtube.com/watch?v=I8WBqAFp9L4" target="_blank">
+                <button class="btn btn-default new-product">보건의료 분야 데모 영상</button>
+              </a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="https://www.youtube.com/watch?v=2QCw_6aeRVE" target="_blank">
+                <button class="btn btn-default new-product">공공분야 (화성시청) 데모 영상</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- /ddmvwrap -->
+
+  <section id="price" class="serviceswrap">
+    <!-- Map Wrap -->
+    <div class="mapwrap">
+      <div class="container text-center">
+        <h2>C2i AnimateNumber 컴포넌트를 활용한 가격 표시</h2>
+        <p>아래 가격에 마우스를 올려 보세요.</p>
+        <hr>
+        <div id="c2iPriceServer"></div>
+        <div id="c2iPriceCpu"></div>
+        <!-- <hr>
+        <div id="c2iPriceSrc"></div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Wrap -->
+  <section id="contact" class="contactwrap">
+    <!-- Map Wrap -->
+    <div class="mapwrap">
+      <div class="container text-center">
+        <h2>DDMV: 다차원 시각화 분석 솔루션(서비스)</h2>
+        <h2>C2i: BI & Insights 제공 유일 컴포넌트</h2>
+      </div>
+    </div>
+    <!-- /mapwrap -->
+
+    <br><br><br>
+
+    <div class="container">
+      <div class="row">
+        <!-- Contact Form -->
+        <div class="col-lg-6 col-lg-offset-3" style="text-align: center">
+          <h3>아래 정보로 연락 주세요</h3>
+          <p>언제든지 환영하며 최대한 신속히 답변 드릴 것입니다.</p>
+          <h4>모든 공공기관, 기업 및 솔루션 보유 업체의 협력을 환영합니다.</h4>
+          <br>
+        </div>
+      </div>
+      <!-- /row -->
+      <br><br>
+      <!--<br>-->
+    </div>
+    <!-- /container -->
+
+    <!-- Footer Wrap -->
+    <div class="footerwrap">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <h4>연락처</h4>
+            <p>
+              <i class="fa fa-map-marker"></i>
+              <a target='_blank' href='http://kko.to/GANMWxajM'> 경기 화성시 동탄기흥로 614 더퍼스트타워2 1709호</a><br>
+
+              <i class="fa fa-phone"></i><a href="tel:010-2059-8809"> (010) 2059 - 8809</a><br>
+              <!--<i class="fa fa-fax"></i> (070) 4157 - 7775<br>-->
+              <i class="fa fa-envelope"></i> <a href="mailto:greghan@naver.com">greghan@naver.com</a><br>
+              <i class="fa fa-frown-o"></i>이메일 집단수집 거부
+            </p>
+          </div>
+          <div class="col-lg-8">
+            <h4><i class="fa fa-user-plus"></i>함께 연구할 엔지니어 기술요건.</h4>
+            <p><i class="fa fa-check-circle"></i>AI & MR(Deep-Learning) 개념 및 Keras, Tensorflow, Scikit-learn, Python/R 등.</p>
+            <p><i class="fa fa-check-circle"></i>Javascript, D3.js, Three.js, Vue/React/Angular.js, Node.js, MongoDB, Git 외 Open-Source 기술.</p>
+            <p>
+              &emsp;<i class="fa fa-check"></i>이력서 및 자기소개서 1부 (자유양식)<br> &emsp;
+              <i class="fa fa-check"></i>필수: 전문기술/희망연봉,휴대폰/이메일
+            </p>
+            <!--<div class="form-inline">
+								<input type="text" class="form-control" placeholder="Your email">
+								<button class="btn btn-theme" type="button">Subscribe</button>
+							</div>-->
+            <h4>가장 중요한 것은 <strong>협력과 열정</strong>입니다!!</h4>
+          </div>
+
+          <!--<div class="col-lg-4">
+							<div id="social">
+								&lt;!&ndash;<a href="#" rel="tooltip" title="Facebook" class="facebook">페이스북</a>
+								<a href="#" rel="tooltip" title="Twitter" class="twitter">트위터</a>
+								<a href="#" rel="tooltip" title="RSS" class="rss">RSS</a>
+								<a href="#" rel="tooltip" title="Github" class="github">Github</a>
+								<a href="#" rel="tooltip" title="LinkedIn" class="linkedin">링크드인</a>
+								<a href="#" rel="tooltip" title="Vimeo" class="vimeo">Vimeo</a>
+								<a href="#" rel="tooltip" title="YouTube" class="youtube">유투브</a>-->
+          <!-- * 카카오맵 - 지도퍼가기 -->
+          <!-- 1. 지도 노드 -->
+          <!--<div id="daumRoughmapContainer1561543913297" class="root_daum_roughmap root_daum_roughmap_landing"></div>-->
+
+          <!--
+                  2. 설치 스크립트
+                  * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+                -->
+          <!--<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>-->
+
+          <!-- 3. 실행 스크립트 -->
+          <!--<script charset="UTF-8">
+                  new daum.roughmap.Lander({
+                    "timestamp" : "1561543913297",
+                    "key" : "u46g",
+                    "mapWidth" : "640",
+                    "mapHeight" : "360"
+                  }).render();
+                </script>-->
+
+          <!--<div class="clearfix"></div>
+						</div>-->
+        </div>
+        <!-- row -->
+        <br>
+      </div>
+      <!-- /container -->
+    </div>
+    <!-- /footerwrap -->
+
+    <!-- Copy Wrap -->
+    <div class="copywrap">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9">
+            <p>&copy; 2017~ 비투아이랩. All rights reserved.</p>
+          </div>
+          <!--<div class="col-lg-3">
+							<p><a href="#">Legal</a> | <a href="#">Privacy</a> | <a href="#">Security</a></p>
+						</div>-->
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </div>
+    <!-- /copywrap -->
+  </section>
+  <!-- /contactwrap -->
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-64778925-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="assets/js/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery.easing.min.js"></script>
+  <script src="assets/js/jquery.ba-cond.min.js"></script>
+  <script src="assets/js/jquery.slitslider.js"></script>
+  <script src="assets/js/retina.js"></script>
+  <script src="assets/js/functions.js"></script>
+
+  <script src="assets/lib/d3.min.js" charset="utf-8"></script>
+  <script src="assets/lib/three.min.js"></script>
+
+  <script src="assets/js/c2i.v2.min.js"></script>
+
+  <script src="assets/i18n/c2i_kr.js"></script>
+
+  <script>
+    var serverOptions = {
+      tagName: 'h1',
+      caption: '1도메인/1서버 : ',
+      easing: 'cubicInOut',
+      duration: 5000,
+      data: undefined,
+      className: 'c2iPrice',
+      fonts: ['Lato', '40px', 'green'],
+      format: ',f',
+      prefix: '',
+      unit: ' (만원)',
+      opacity: 1,
+      hoverAnimate: true,
+      beginValue: '50%'
+    };
+
+    c2i.ui.animateNumber('#c2iPriceServer', serverOptions).data(1500).render();
+
+    var cpuOptions = {
+      tagName: 'h1',
+      caption: '1코어/1서버 : ',
+      easing: 'cubicInOut',
+      duration: 2500,
+      data: undefined,
+      className: 'c2iPrice',
+      fonts: ['Lato', '40px', 'green'],
+      format: ',f',
+      prefix: '',
+      unit: ' (만원)',
+      opacity: 1,
+      hoverAnimate: true,
+      beginValue: '25%'
+    };
+
+    var c2iPriceCpu = c2i.ui.animateNumber('#c2iPriceCpu', cpuOptions).data(400).render();
+    var animation, cnt = 0;
+    var fonts = [
+      ['Lato', '40px', 'orange'],
+      ['Lato', '54px', 'steelblue'],
+      ['Lato', '44px', 'purple'],
+      ['Lato', '30px', 'dimgray'],
+      ['Lato', '40px', 'green']
+    ];
+
+    var srcOptions = {
+      tagName: 'h1',
+      caption: 'New Source Price : ',
+      easing: 'cubicInOut',
+      duration: 1500,
+      data: undefined,
+      className: 'c2iPrice',
+      fonts: ['Lato', '60px', 'red'],
+      format: ',f',
+      prefix: '',
+      unit: ' (만원)',
+      opacity: 1,
+      hoverAnimate: true,
+      beginValue: '70%'
+    };
+    // var c2iPriceSrc = c2i.ui.animateNumber('#c2iPriceSrc', srcOptions).data(3000).render();
+    animatedAction();
+    //////////////
+    function animatedAction() {
+
+      animation = setInterval(tick, 10000);
+
+      function tick() {
+        cnt++;
+        serverOptions.fonts = fonts[cnt % 5];
+        c2i.ui.animateNumber('#c2iPriceServer', serverOptions).data(1500).render();
+        c2iPriceCpu.render();
+        // c2iPriceSrc.render();
+
+        if (cnt > 10) {
+          animation = clearInterval(animation);
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
