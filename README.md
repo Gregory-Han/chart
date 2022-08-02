@@ -6,4 +6,4 @@ https://data-wow.co.kr:333
 
 http://casual-insight.com
 
-https://github.com/Gregory-Han/casual-insight
+https://gregory-han.github.io/casual-insight
